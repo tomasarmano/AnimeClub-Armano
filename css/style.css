@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(6, 8, 32);
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header-content {
+    background-image: url(../assets/img/megumi-y-toji-de-jujutsu-kaisen-11755.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+}
+h1{
+    font-weight: bold;
+    font-size: 40px;
+    padding-top: 20px;
+}
+.txt-p{
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+main{
+    justify-content: center;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2px;
+    margin: 0 auto;
+    margin-bottom: 3px;
+}
+main h2{
+    text-align: center;
+    font-weight: 500;
+    font-size: 45px;
+    color: var(--white);
+    padding-bottom: 15px;
+    text-decoration: underline rgb(12, 159, 157);
+}
+main p{
+    font-size: 28px;
+    text-align: center;
+    padding-top: 10px;
+}
+.preventa{
+    color: white;
+    cursor: pointer;
+}
+.preventa:hover{
+    background-color: white;
+    color: black;
+}
+.estreno{
+    color: white;
+    cursor: pointer;
+}
+.estreno:hover{
+    background-color: white;
+    color: black;
+}
+.cartelera{
+    background-color:white ;
+    color: black;
+    cursor: pointer;
+
+}
+.cartelera:hover{
+    background-color:black ;
+    color: white;
+}
+.animes{
+    cursor: pointer;
+}
