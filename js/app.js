@@ -1,13 +1,6 @@
-//  let cantidadAnimesVistos = parseInt(prompt('Ingresa la cantidad de animes que hayas visto ;)'));
- 
-//  if(isNaN(cantidadAnimesVistos)) {
-//      alert('Ingresa un numero valido por favor.')
-//  } else {
-//      for (let i = 1; i <= cantidadAnimesVistos; i++){
-//          let anime = prompt('Ingresa el nombre del anime');
-//          console.log(`${i}: ${anime}`);
-//      }   
-//  }
+ let nombre = prompt('Ingrese su nombre por favor');
+ let saludo = "bienvenido"
+ alert(`${saludo} ${nombre}`)
 
  const series = [
     { id: '3299219123', name: "Naruto", category: "estreno" , gender: "Accion, Artes marciales, Aventura, Comedia, Fantasia", price: 150 },
@@ -27,79 +20,20 @@
     { id: '3599255523', name: "Mob Psycho 100", category: "estreno" , gender: "Accion, Comedia, Sobrenatural, Superpoderes" , price: 150 }, 
  ]
 
- let naruto = document.querySelector('.naruto')
- naruto.addEventListener('click',()=> {
-   console.log(series[0])
- })
+  document.onload = mostrarSeries(series)
 
- let dragonball = document.querySelector('.dragonball')
- dragonball.addEventListener('click',()=> {
-   console.log(series[1])
- })
+ function mostrarSeries(series){
+    const list = document.getElementById("list");
+    list.innerHTML = "";
+    for(let serie of series){
+        let nodo = document.createElement("li");
+        nodo.innerHTML = `${serie.name}`;
+        list.appendChild(nodo);
+    }
+ }
 
- let attackontitan = document.querySelector('.attackontitan')
- attackontitan.addEventListener('click',()=> {
-   console.log(series[2])
- })
-
- let chainsawman = document.querySelector('.chainsawman')
- chainsawman.addEventListener('click',()=> {
-   console.log(series[3])
- })
-
- let boruto = document.querySelector('.boruto')
- boruto.addEventListener('click',()=> {
-   console.log(series[4])
- })
-
- let baki = document.querySelector('.baki')
- baki.addEventListener('click',()=> {
-   console.log(series[5])
- })
-
- let onepunchman = document.querySelector('.onepunchman')
- onepunchman.addEventListener('click',()=> {
-   console.log(series[6])
- })
-
- let hunterxhunter = document.querySelector('.hunterxhunter')
- hunterxhunter.addEventListener('click',()=> {
-   console.log(series[7])
- })
-
- let onepiece = document.querySelector('.onepiece')
- onepiece.addEventListener('click',()=> {
-   console.log(series[8])
- })
-
- let blackclover = document.querySelector('.blackclover')
- blackclover.addEventListener('click',()=> {
-   console.log(series[9])
- })
-
- let jujutsukaisen = document.querySelector('.jujutsukaisen')
- jujutsukaisen.addEventListener('click',()=> {
-   console.log(series[10])
- })
-
- let tokiorevengers = document.querySelector('.tokiorevengers')
- tokiorevengers.addEventListener('click',()=> {
-   console.log(series[11])
- })
-
- let sololeveling = document.querySelector('.chainsawman')
- chainsawman.addEventListener('click',()=> {
-   console.log(series[12])
- })
-
- let demonslayer = document.querySelector('.demonslayer')
- demonslayer.addEventListener('click',()=> {
-   console.log(series[13])
- })
-
- let mobpsycho100 = document.querySelector('.mobpsycho100')
- mobpsycho100.addEventListener('click',()=> {
-   console.log(series[14])
- })
-
- function mostrarSeries(serie)
+ function filterName(){
+    let input = document.getElementById("name").value;
+    let arrayFiltrado = series.filter(serie => serie.name.toLowerCase().includes(input));
+    mostrarSeries(arrayFiltrado);
+ }

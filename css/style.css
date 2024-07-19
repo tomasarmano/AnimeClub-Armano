@@ -47,37 +47,3 @@ main h2{
     padding-bottom: 15px;
     text-decoration: underline rgb(12, 159, 157);
 }
-main p{
-    font-size: 28px;
-    text-align: center;
-    padding-top: 10px;
-}
-.preventa{
-    color: white;
-    cursor: pointer;
-}
-.preventa:hover{
-    background-color: white;
-    color: black;
-}
-.estreno{
-    color: white;
-    cursor: pointer;
-}
-.estreno:hover{
-    background-color: white;
-    color: black;
-}
-.cartelera{
-    background-color:white ;
-    color: black;
-    cursor: pointer;
-
-}
-.cartelera:hover{
-    background-color:black ;
-    color: white;
-}
-.animes{
-    cursor: pointer;
-}
