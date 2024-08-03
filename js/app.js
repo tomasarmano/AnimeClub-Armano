@@ -1,6 +1,19 @@
- let nombre = prompt('Ingrese su nombre por favor');
- let saludo = "bienvenido"
- alert(`${saludo} ${nombre}`)
+ let boton_modo = document.querySelector('button')
+ let body = document.body
+  
+ let modo_usuario  = localStorage.getItem('modo')
+ body.className = modo_usuario
+
+ boton_modo.addEventListener('click',()=> {
+      
+   if (body.className == 'light-mode'){
+      body.className = 'dark-mode'
+   } else {
+      body.className = 'light-mode'
+   }
+   localStorage.setItem('modo', body.className)
+   console.log(localStorage)
+})
 
  const series = [
     { id: '3299219123', name: "Naruto", category: "estreno" , gender: "Accion, Artes marciales, Aventura, Comedia, Fantasia", price: 150 },
@@ -14,15 +27,15 @@
     { id: '6299292913', name: "One Piece", category: "estreno" , gender: "Accion, Artes marciales, Aventura, Superpoder, Fantasia, Comedia" , price: 300 },
     { id: '7299244443', name: "Black Clover", category: "preventa" , gender: "Accion, Fantasia" , price: 170 },
     { id: '3299999123', name: "Jujutsu Kaisen", category: "estreno" , gender: "Accion, Fantasia oscura, Sobrenatural" , price: 190 },
-    { id: '1299219999', name: "Tokio Revengers", category: "preventa" , gender: "Accion, Sobrenatural, Drama, Romance" , price: 200 },
+    { id: '1299219999', name: "Tokyo Revengers", category: "preventa" , gender: "Accion, Sobrenatural, Drama, Romance" , price: 200 },
     { id: '3299214423', name: "Solo Leveling", category: "estreno" , gender: "Accion, Aventura, Fantasia" , price: 140 },
     { id: '3299777123', name: "Demon Slayer", category: "estreno" , gender: "Accion, Aventura, Comedia, Drama, Fantasia oscura, Sobrenatural" , price: 250 },
     { id: '3599255523', name: "Mob Psycho 100", category: "estreno" , gender: "Accion, Comedia, Sobrenatural, Superpoderes" , price: 150 }, 
  ]
 
-  document.onload = mostrarSeries(series)
+  document.onload = showSeries(series)
 
- function mostrarSeries(series){
+ function showSeries(series){
     const list = document.getElementById("list");
     list.innerHTML = "";
     for(let serie of series){
@@ -34,6 +47,9 @@
 
  function filterName(){
     let input = document.getElementById("name").value;
-    let arrayFiltrado = series.filter(serie => serie.name.toLowerCase().includes(input));
-    mostrarSeries(arrayFiltrado);
+    let arrayFilter = series.filter(serie => serie.name.toLowerCase().includes(input));
+    showSeries(arrayFilter);
  }
+
+
+

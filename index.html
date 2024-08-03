@@ -4,10 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Javascript</title>
+    <link rel="shortcut icon" href="./assets/img/apple-touch-icon.png">
+    <title>Anime Club | Inicio</title>
 </head>
-<body>
+<body class="light-mode">
     <header>
+        <ul  class="navbar">
+            <li class="titulo">ANIME CLUB</li>
+            <li>
+                <a href="index.html">Inicio </a>
+            </li>
+            <li>
+                <a href="./pages/crear-cuenta.html">Crear cuenta</a>
+            </li>
+            <li>
+                <a href="./pages/iniciar-sesion.html">Iniciar sesion</a>
+            </li>
+            <li>
+                <a href="./pages/mi-cuenta.html">Mi cuenta</a>
+            </li>
+        </ul>
         <div class="header-content">
             <div class="container">
                 <h1>Anime Club</h1>
@@ -16,18 +32,106 @@
         </div>
     </header>
     <main>
+        <button class="tema">Cambiar modo</button>
         <div class="container">
             <h2>Series</h2>
             <div class="buscador">
-                <input type="text" id="name" oninput="filterName()">
+                <input type="text" placeholder="Buscar" id="name" oninput="filterName()">
             </div>
             <ul id="list">
             </ul>
+        </div>  
+        <div class="catalogo">
+            <div class="mostrador">    
+                <h2>Cartelera</h2>
+                <div class="fila">
+                    <div class="item">
+                        <img src="./assets/img/naruto.jpg" alt="">
+                        <p class="nombre">NARUTO</p>
+                        <span class="precio">$150</span>
+                    </div>  
+                    <div class="item">
+                        <img src="./assets/img/dragonball.png" alt="">
+                        <p class="nombre">DRAGON BALL</p>
+                        <span class="precio">$170</span>
+                    </div>
+                    <div class="item">
+                        <img src="./assets/img/shingeki-no-kyojin-poster.jpg" alt="">
+                        <p class="nombre">ATTACK ON TITAN</p>
+                        <span class="precio">$200</span>
+                    </div>
+                    <div class="item">
+                        <img src="./assets/img/desktop-wallpaper-chainsaw-man-manga-cover-chainsaw-man.jpg" alt="">
+                        <p class="nombre">CHAINSAW MAN</p>
+                        <span class="precio">$80</span>
+                    </div>
+                    <div class="item">
+                        <img src="./assets/img/Boruto-portada.webp" alt="">
+                        <p class="nombre">BORUTO</p>
+                        <span class="precio">$140</span>
+                    </div>
+                </div>
+                <div class="fila">    
+                    <div class="item">
+                        <img src="./assets/img/baki.jpg" alt="">
+                        <p class="name">BAKI</p>
+                        <span class="price">$100</span>
+                    </div>
+                    <div class="item">
+                        <img src="./assets/img/images.jfif" alt="">
+                        <p class="name">ONE PUNCH MAN</p>
+                        <span class="price">$110</span>
+                    </div>
+                    <div class="item">
+                        <img src="./assets/img/Volumen_01.webp" alt="">
+                        <p class="name">HUNTER X HUNTER</p>
+                        <span class="price">$130</span>
+                    </div>
+                    <div class="item">
+                        <img src="./assets/img/One-Piece-104-503x790.webp" alt="">
+                        <p class="name">ONE PIECE</p>
+                        <span class="price">$300</span>
+                    </div>
+                    <div class="item">
+                        <img src="./assets/img/blackclover.avif" alt="">
+                        <p class="name">BLACK CLOVER</p>
+                        <span class="price">$170</span>
+                    </div>
+                </div>
+                <div class="fila">
+                    <div class="item">
+                        <img src="./assets/img/jujutsukaisen.jpe" alt="">
+                        <p class="name">JUJUTSU KAISEN</p>
+                        <span class="price">$190</span>
+                    </div>
+                    <div class="item">
+                        <img src="./assets/img/tokyorevengers.jpe" alt="">
+                        <p class="name">TOKYO REVENGERS</p>
+                        <span class="price">$200</span>
+                    </div>
+                    <div class="item">
+                        <img src="./assets/img/Solo_Leveling_Vol_2.webp" alt="">
+                        <p class="name">SOLO LEVELING</p>
+                        <span class="price">$140</span>
+                    </div>
+                    <div class="item">
+                        <img src="./assets/img/demonsalyer.webp" alt="">
+                        <p class="name">DEMON SLAYER</p>
+                        <span class="price">$250</span>
+                    </div>
+                    <div class="item">
+                        <img src="./assets/img/Mob_Psycho_100_poster.webp" alt="">
+                        <p class="name">MOB PSYCHO 100</p>
+                        <span class="price">$150</span>
+                    </div>
+                </div>    
+            </div>    
         </div>    
     </main>
     <footer>
 
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="js/app.js"></script>
 </body>
 </html>
