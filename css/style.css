@@ -22,6 +22,9 @@ body{
 .tema{
     margin: 10px;
 }
+.logo{
+    width: 50px;
+}
 .navbar{
     display: flex;
     width: 100%;
@@ -29,6 +32,7 @@ body{
     align-items: center;
     flex-direction: row;
     gap: 10px;
+    background-color: var(--blue);
 }
 .navbar .titulo{
     font-weight: bold;
@@ -43,7 +47,37 @@ body{
 .navbar li a{
     list-style: none;
     text-decoration: none;
+    color: white;   
+}
+.navbar li a:hover{
+    text-decoration: underline 4px var(--lightblue);
+}
+.navbar2{
+    display: flex;
+    width: 100%;
+    padding: 20px 10px;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    background-color: rgb(65, 64, 64);
+}
+.navbar2 .titulo{
+    font-weight: bold;
+}
+.navbar2 li{
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 0 5px ;
+  flex-wrap: wrap;
+}
+.navbar2 li a{
+    list-style: none;
+    text-decoration: none;
     color: white;
+}
+.navbar2 li a:hover{
+    text-decoration: underline 4px var(--lightblue);
 }
 .header-content {
     background-image: url(../assets/img/megumi-y-toji-de-jujutsu-kaisen-11755.jpg);
@@ -123,4 +157,58 @@ button:hover{
     color: white;
     font-size: 13px;
 }
-
+.cuenta {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 2rem;
+}
+.cuenta form {
+    padding: 50px 55px;
+    text-align: center;
+    align-items: center;
+    width: 340px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    margin-bottom: 20px;
+    background-color: rgb(65, 64, 64);
+}
+.cuenta form h2 {
+    font-size: 30px;
+    color: var(--black);
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: bold;
+}
+.cuenta form label {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.cuenta form input, .cuenta form textarea {
+    padding: 17px 25px;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    border: 2px solid var(--white);
+    color: var(--black);
+    outline: none;
+}
+.cuenta form .btn-dos {
+    font-size: 16px;
+    border: 0;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 95%;
+    background-color: var(--lightblue)
+}
+.cuenta form .btn-dos:hover {
+    color: var(--blue);
+    background-color: rgb(46, 46, 216);
+}
+.cuenta form li {
+    list-style: none;
+}
+.cuenta form ul li a{
+    color: var(--lightblue);
+}  

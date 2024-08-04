@@ -1,6 +1,5 @@
  let boton_modo = document.querySelector('button')
- let body = document.body
-  
+ let body = document.body 
  let modo_usuario  = localStorage.getItem('modo')
  body.className = modo_usuario
 
@@ -33,6 +32,10 @@
     { id: '3599255523', name: "Mob Psycho 100", category: "estreno" , gender: "Accion, Comedia, Sobrenatural, Superpoderes" , price: 150 }, 
  ]
 
+ let series_JSON = JSON.stringify(series)
+
+
+ localStorage.setItem('series', series_JSON)
   document.onload = showSeries(series)
 
  function showSeries(series){
@@ -50,6 +53,3 @@
     let arrayFilter = series.filter(serie => serie.name.toLowerCase().includes(input));
     showSeries(arrayFilter);
  }
-
-
-
