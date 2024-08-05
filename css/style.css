@@ -25,6 +25,101 @@ body{
 .logo{
     width: 50px;
 }
+.icon-cart{
+    width: 30px;
+    height: 30px;
+    stroke: white;
+}
+.icon-cart:hover{
+    cursor: pointer;
+}
+.container-icon{
+    position: relative;
+}
+.count-products{
+    position: absolute;
+    top: 55%;
+    right: 0;
+    background-color: black;
+    color: white;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+#contador-productos{
+    font-size: 12px;
+}
+.container-cart-products{
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: black;
+    color: white;
+    width: 350px;
+    z-index: 1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+    border-radius: 10px;
+}
+.cart-product{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+}
+.info-cart-product{
+    display: flex;
+    justify-content: space-between;
+    flex: 0.8;
+}
+.titulo-producto-carrito{
+    font-size: 18px;
+}
+.precio-producto-carrito{
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 10px;
+}
+.cantidad-producto-carrito{
+    font-weight: 400;
+    font-size: 18px;
+}
+.icon-close{
+    width: 25px;
+    height: 25px;
+}
+.icon-close:hover{
+    stroke: red;
+    cursor: pointer;
+}
+.cart-total{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    gap: 20px;
+}
+.cart-total h3{
+    font-size: 20px;
+    font-weight: bold;
+}
+.cart-empty{
+    text-align: center;
+    padding: 20px;
+}
+.total-pagar{
+    font-size: 20px;
+    font-weight: bold;
+}
+.hidden-cart{
+    display: none;
+}
+.hidden{
+    display: none;
+}
 .navbar{
     display: flex;
     width: 100%;
@@ -33,6 +128,7 @@ body{
     flex-direction: row;
     gap: 10px;
     background-color: var(--blue);
+    position: fixed;
 }
 .navbar .titulo{
     font-weight: bold;
@@ -84,6 +180,7 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     min-height: 70vh;
     display: flex;
     align-items: center;
@@ -118,44 +215,47 @@ h2{
 button:hover{
     cursor: pointer;
 }
-.catalogo{
-    max-width: 1100px;
+.container-items{
     width: 100%;
-    margin: 40px auto;
-    display: flex;
 }
-.mostrador{
-    width: 100%;   
+.container-items h2{
+    padding-top: 12px;
 }
-.mostrador .fila{
+.container-items .fila{
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
 }
-.mostrador .fila .item{
+.container-items .fila .item{
     max-width: 210px;
     padding: 10px;
-    height: 250px;
+    height: 425px;
     text-align: center;
     margin: 0 10px;
-    cursor: pointer;
     border-radius: 5px;
-    margin-bottom: 90px;
+    margin-bottom: 5px;
 }
-.mostrador .fila .item img{
+.container-items .fila .item:hover{
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+.container-items .fila .item img{
     width: 100%;
-    max-width: 190px;
-    max-height: 280px;
+    width: 190px;
+    height: 280px;
     margin: 20px 0;
 }
-.mostrador .fila .item .name{
-    font-weight: bold;
+.container-items .fila .item .price{
     color: white;
-    font-size: 18px;
+    font-size: 15px;
+    padding-top: 5px;
 }
-.mostrador .fila .item .precio{
+.container-items .fila .item .btn-add-cart{
+    background-color: var(--lightblue);
     color: white;
-    font-size: 13px;
+    height: 25px;
+    width: 100%;
+    margin-top: 10px;
+    cursor: pointer;
 }
 .cuenta {
     display: flex;
