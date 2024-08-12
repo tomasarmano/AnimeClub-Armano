@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="../assets/img/luffy-s-straw-hat-in-one-piece-straw-hat-free-vector-Photoroom.png">
     <title>Anime Club | Crear cuenta</title>
 </head>
-<body>
+<body class="dark-mode">
     <header>
         <ul  class="navbar2">
           <img class="logo" src="../assets/img/luffy-s-straw-hat-in-one-piece-straw-hat-free-vector-Photoroom.png" alt="">
@@ -20,9 +20,6 @@
             </li>
             <li>
                 <a href="./iniciar-sesion.html">Iniciar sesion</a>
-            </li>
-            <li>
-                <a href="./mi-cuenta.html">Mi cuenta</a>
             </li>
             <div class="container-icon">
               <div class="container-cart-icon">
@@ -74,33 +71,33 @@
         </ul>
     </header>
     <main class="cuenta">
-        <form>
+        <form id="signupForm">
             <h2>Crear Cuenta</h2>
             <div>
               <label for="name"></label>
-              <input type="text" name="name" placeholder="Nombre" required>
+              <input type="text" id="nombre" placeholder="Nombre" required autofocus>
             </div>
             <div>
               <label for="email"></label>
-              <input type="text" name="email" placeholder="Email" required>
+              <input type="text" id="email" placeholder="Email" required>
             </div>
             <div>
               <label for="password"></label>
-              <input type="password" name="Contraseña" placeholder="Contraseña" required>
+              <input type="password" id="password" placeholder="Contraseña" required>
             </div>
             <div>
-              <label for="password"></label>
-              <input type="password" name="Contraseña" placeholder="Repetir Contraseña" required>
-            </div>
             <div>
               <input class="btn-dos" type="submit" value="Crear cuenta">
             </div>
+            <ul>
+                <li><a href="./iniciar-sesion.html">Ya tienes cuenta?</a></li>
+            </ul>
         </form>
       </main>
     <footer>
 
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="../js/app.js"></script>
+    <script src="../js/crearcuenta.js"></script>
 </body>
 </html>

@@ -281,10 +281,14 @@ button:hover{
     text-align: center;
     font-weight: bold;
 }
-.cuenta form label {
-    font-size: 15px;
-    font-weight: 600;
-    margin-bottom: 15px;
+.cuenta form #nombre{
+    color: black;
+}
+.cuenta form #email{
+    color: black;
+}
+.cuenta form #password{
+    color: black;
 }
 .cuenta form input, .cuenta form textarea {
     padding: 17px 25px;

@@ -3,15 +3,13 @@
  let modo_usuario  = localStorage.getItem('modo')
  body.className = modo_usuario
 
- boton_modo.addEventListener('click',()=> {
-      
-   if (body.className == 'light-mode'){
+ boton_modo.addEventListener('click',()=>{
+    if (body.className == 'light-mode'){
       body.className = 'dark-mode'
    } else {
       body.className = 'light-mode'
    }
    localStorage.setItem('modo', body.className)
-   console.log(localStorage)
 })
 
  const series = [
@@ -36,23 +34,23 @@
 
  localStorage.setItem('series', series_JSON)
 
- document.onload = showSeries(series)
+//  document.onload = showSeries(series)
 
- function showSeries(series){
-    const list = document.getElementById("list");
-    list.innerHTML = "";
-    for(let serie of series){
-        let nodo = document.createElement("li");
-        nodo.innerHTML = `${serie.name}`;
-        list.appendChild(nodo);
-    }
- }
+//  function showSeries(series){
+//     const list = document.getElementById("list");
+//     list.innerHTML = "";
+//     for(let serie of series){
+//         let nodo = document.createElement("li");
+//         nodo.innerHTML = `${serie.name}`;
+//         list.appendChild(nodo);
+//     }
+//  }
 
- function filterName(){
-    let input = document.getElementById("name").value;
-    let arrayFilter = series.filter(serie => serie.name.toLowerCase().includes(input));
-    showSeries(arrayFilter);
- }
+//  function filterName(){
+//     let input = document.getElementById("name").value;
+//     let arrayFilter = series.filter(serie => serie.name.toLowerCase().includes(input));
+//     showSeries(arrayFilter);
+//  }
  
  const btnCart = document.querySelector('.container-cart-icon');
  const containerCartProducts = document.querySelector(

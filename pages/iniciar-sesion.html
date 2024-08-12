@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="../assets/img/luffy-s-straw-hat-in-one-piece-straw-hat-free-vector-Photoroom.png">
     <title>Anime Club | Iniciar sesion</title>
 </head>
-<body>
+<body class="dark-mode">
     <header>
         <ul  class="navbar2">
             <img class="logo" src="../assets/img/luffy-s-straw-hat-in-one-piece-straw-hat-free-vector-Photoroom.png" alt="">
@@ -20,9 +20,6 @@
             </li>
             <li>
                 <a href="./iniciar-sesion.html">Iniciar sesion</a>
-            </li>
-            <li>
-                <a href="./mi-cuenta.html">Mi cuenta</a>
             </li>
             <div class="container-icon">
                 <div class="container-cart-icon">
@@ -73,25 +70,28 @@
             </div>
     </header>
     <main class="cuenta">
-        <form>
+        <form id="loginForm">
             <h2>Iniciar Sesión</h2>
             <div>
                 <label for="email"></label>
-                <input type="text" name="email" placeholder="Email / Nombre">
+                <input type="text" id="email" name="email" placeholder="Email" required autofocus>
             </div>
             <div>
                 <label for="password"></label>
-                <input type="password" name="Contraseña" placeholder="Contraseña" required>
+                <input type="password" id="password" name="Contraseña" placeholder="Contraseña" required>
             </div>
             <div>
                 <input class="btn-dos" type="submit" value="Iniciar Sesion">
             </div>
+            <ul>
+                <li><a href="./crear-cuenta.html">¿Aun no tienes cuenta?</a></li>
+            </ul>
          </form>
     </main>
     <footer>
 
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="../js/app.js"></script>
+    <script src="../js/iniciarsesion.js"></script>
 </body>
 </html>
