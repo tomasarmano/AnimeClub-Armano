@@ -14,6 +14,5 @@ signupForm.addEventListener('submit', (e)=>{
    Users.push({name: nombre, email: email, password: password})
    localStorage.setItem('users', JSON.stringify(Users))
    alert('Se ha registrado con exito!')
-   location.href = 'https://tomasarmano.github.io/AnimeClub-Armano/pages/crear-cuenta.html'
 
 })

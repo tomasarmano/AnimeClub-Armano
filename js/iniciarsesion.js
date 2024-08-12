@@ -9,6 +9,5 @@ loginForm.addEventListener('submit', (e)=>{
         return alert('Usuario y/o Contraseña incorrectos!')
     }  
     alert(`Bienvenido ${validUser.name}`)
-    location.href = 'https://tomasarmano.github.io/AnimeClub-Armano/index.html'
 
 })
