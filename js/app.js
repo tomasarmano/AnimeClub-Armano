@@ -33,24 +33,6 @@
  let series_JSON = JSON.stringify(series)
 
  localStorage.setItem('series', series_JSON)
-
-//  document.onload = showSeries(series)
-
-//  function showSeries(series){
-//     const list = document.getElementById("list");
-//     list.innerHTML = "";
-//     for(let serie of series){
-//         let nodo = document.createElement("li");
-//         nodo.innerHTML = `${serie.name}`;
-//         list.appendChild(nodo);
-//     }
-//  }
-
-//  function filterName(){
-//     let input = document.getElementById("name").value;
-//     let arrayFilter = series.filter(serie => serie.name.toLowerCase().includes(input));
-//     showSeries(arrayFilter);
-//  }
  
  const btnCart = document.querySelector('.container-cart-icon');
  const containerCartProducts = document.querySelector(
