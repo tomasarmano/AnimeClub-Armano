@@ -13,21 +13,21 @@
 })
 
  const series = [
-    { id: '3299219123', name: "Naruto", category: "estreno" , gender: "Accion, Artes marciales, Aventura, Comedia, Fantasia", price: 150 },
-    { id: '1220419646', name: "Dragon Ball", category: "estreno" , gender: "Accion, Comedia, Aventura, Fantasia" , price: 170 },
-    { id: '5299218674', name: "Attack On Titan", category: "estreno" , gender: "Accion, Fantasia oscura, Drama post-apocaliptico" , price: 200 },
-    { id: '6299899123', name: "Chainsaw Man", category: "preventa" , gender: "Accion, Fantasia oscura, Comedia de terror" , price: 80 },
-    { id: '9299777123', name: "Boruto", category: "preventa" , gender: "Accion, Artes marciales, Aventura, Comedia ,Fantasia" , price: 140 },
-    { id: '8299885563', name: "Baki", category: "estreno" , gender: "Accion, Artes marciales, Aventura, Deportes" , price: 100 },
-    { id: '3211219113', name: "One Punch Man", category: "preventa" , gender: "Accion, Comedia, Superheroes" , price: 110 },
-    { id: '2299219999', name: "Hunter x Hunter", category: "preventa" , gender: "Accion, Aventura, Fantasia oscura, Comedia dramatica, Psicologico, Tragedia" , price: 130 },
-    { id: '6299292913', name: "One Piece", category: "estreno" , gender: "Accion, Artes marciales, Aventura, Superpoder, Fantasia, Comedia" , price: 300 },
-    { id: '7299244443', name: "Black Clover", category: "preventa" , gender: "Accion, Fantasia" , price: 170 },
-    { id: '3299999123', name: "Jujutsu Kaisen", category: "estreno" , gender: "Accion, Fantasia oscura, Sobrenatural" , price: 190 },
-    { id: '1299219999', name: "Tokyo Revengers", category: "preventa" , gender: "Accion, Sobrenatural, Drama, Romance" , price: 200 },
-    { id: '3299214423', name: "Solo Leveling", category: "estreno" , gender: "Accion, Aventura, Fantasia" , price: 140 },
-    { id: '3299777123', name: "Demon Slayer", category: "estreno" , gender: "Accion, Aventura, Comedia, Drama, Fantasia oscura, Sobrenatural" , price: 250 },
-    { id: '3599255523', name: "Mob Psycho 100", category: "estreno" , gender: "Accion, Comedia, Sobrenatural, Superpoderes" , price: 150 }, 
+    { name: "Naruto", price: 150 },
+    { name: "Dragon Ball", price: 170 },
+    { name: "Attack On Titan", price: 200 },
+    { name: "Chainsaw Man",  price: 80 },
+    { name: "Boruto", price: 140 },
+    { name: "Baki", price: 100 },
+    { name: "One Punch Man", price: 110 },
+    { name: "Hunter x Hunter", price: 130 },
+    { name: "One Piece", price: 300 },
+    { name: "Black Clover", price: 170 },
+    { name: "Jujutsu Kaisen", price: 190 },
+    { name: "Tokyo Revengers", price: 200 },
+    { name: "Solo Leveling", price: 140 },
+    { name: "Demon Slayer", price: 250 },
+    { name: "Mob Psycho 100", price: 150 }, 
  ]
 
  let series_JSON = JSON.stringify(series)
@@ -156,3 +156,8 @@
     valorTotal.innerText = `$${total}`;
     countProducts.innerText = totalOfProducts;
  };
+
+ fetch('data.json')
+   .then(response => response.json())
+   .then(data => console.log(data))
+   .catch(error => console.log(error))
