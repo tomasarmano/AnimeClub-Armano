@@ -90,6 +90,7 @@ body{
 .icon-close{
     width: 25px;
     height: 25px;
+    z-index: 10;
 }
 .icon-close:hover{
     stroke: red;
@@ -120,6 +121,10 @@ body{
 .hidden{
     display: none;
 }
+.pagar{
+    margin-left: 150px;
+    margin-bottom: 10px;
+}
 .navbar{
     display: flex;
     width: 100%;
@@ -130,7 +135,7 @@ body{
     background-color: var(--blue);
     position: fixed;
 }
-.navbar .titulo{
+.navbar .nombre{
     font-weight: bold;
 }
 .navbar li{
@@ -203,7 +208,7 @@ h1{
     margin: 0 auto;
     margin-bottom: 3px;
 }
-h2{
+.titulo{
     text-align: center;
     font-weight: 500;
     font-size: 45px;
@@ -212,7 +217,7 @@ h2{
     text-decoration: underline var(--lightblue);
     margin: 0 auto;
 }
-button:hover{
+.tema:hover{
     cursor: pointer;
 }
 .container-items{
@@ -225,9 +230,10 @@ button:hover{
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
+    text-align: center;
 }
 .container-items .fila .item{
-    max-width: 210px;
+    width: 290px;
     padding: 10px;
     height: 425px;
     text-align: center;

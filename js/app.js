@@ -1,4 +1,4 @@
- let boton_modo = document.querySelector('button')
+ let boton_modo = document.querySelector('.tema')
  let body = document.body 
  let modo_usuario  = localStorage.getItem('modo')
  body.className = modo_usuario
@@ -35,14 +35,11 @@
  localStorage.setItem('series', series_JSON)
  
  const btnCart = document.querySelector('.container-cart-icon');
- const containerCartProducts = document.querySelector(
-    '.container-cart-products'
- );
- 
+ const containerCartProducts = document.querySelector('.container-cart-products');
  btnCart.addEventListener('click', () => {
     containerCartProducts.classList.toggle('hidden-cart');
  });
- 
+
  const cartInfo = document.querySelector('.cart-product');
  const rowProduct = document.querySelector('.row-product');
  
@@ -51,12 +48,12 @@
  let allProducts = [];
  
  const valorTotal = document.querySelector('.total-pagar');
- 
+ const pay = document.querySelector('.pagar')
  const countProducts = document.querySelector('#contador-productos');
  
  const cartEmpty = document.querySelector('.cart-empty');
  const cartTotal = document.querySelector('.cart-total');
- 
+
  productsList.addEventListener('click', e => {
     if (e.target.classList.contains('btn-add-cart')) {
        const product = e.target.parentElement;
@@ -84,11 +81,16 @@
        } else {
           allProducts = [...allProducts, infoProduct];
        }
- 
+
        showHTML();
     }
+    Swal.fire({
+      title: "Enhorabuena!",
+      text: "El producto se agrego a tu carrito",
+      icon: "success"
+    });
  });
- 
+
  rowProduct.addEventListener('click', e => {
     if (e.target.classList.contains('icon-close')) {
        const product = e.target.parentElement;
@@ -102,17 +104,19 @@
  
        showHTML();
     }
- });
+ }); 
  
  const showHTML = () => {
     if (!allProducts.length) {
        cartEmpty.classList.remove('hidden');
        rowProduct.classList.add('hidden');
        cartTotal.classList.add('hidden');
+       pay.classList.add('hidden');
     } else {
        cartEmpty.classList.add('hidden');
        rowProduct.classList.remove('hidden');
        cartTotal.classList.remove('hidden');
+       pay.classList.remove('hidden');
     }
  
     rowProduct.innerHTML = '';
@@ -155,7 +159,14 @@
  
     valorTotal.innerText = `$${total}`;
     countProducts.innerText = totalOfProducts;
- };
+ 
+    sincronizarStorage();
+    
+   };
+
+   function sincronizarStorage(){
+      localStorage.setItem('carrito', JSON.stringify(allProducts));
+   }
 
  fetch('data.json')
    .then(response => response.json())
