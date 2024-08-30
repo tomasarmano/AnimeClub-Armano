@@ -162,7 +162,7 @@ body{
     gap: 10px;
     background-color: rgb(65, 64, 64);
 }
-.navbar2 .titulo{
+.navbar2 .nombre{
     font-weight: bold;
 }
 .navbar2 li{
