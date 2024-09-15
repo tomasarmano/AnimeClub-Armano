@@ -12,12 +12,9 @@
    localStorage.setItem('modo', body.className)
 })
 
-const img1 = document.getElementById("img1");
-
-
  const series = [
     { id:1, name: "NARUTO Vol. 4", price: 150, img: "./assets/img/NARUTO Vol.4.jpeg" },
-    { id:2, name: "DRAGON BALL vol. 8", price: 170, img: "./assets/img/DRAGON BALL Vol. 8.jpg" },
+    { id:2, name: "DRAGON BALL vol. 15", price: 170, img: "./assets/img/690909.jpg" },
     { id:3, name: "ATTACK ON TITAN vol. 1", price: 200, img: "./assets/img/ATTACK ON TITAN vol. 1.jpg"},
     { id:4, name: "CHAINSAW MAN vol. 1",  price: 80, img: "./assets/img/CHAINSAW MAN vol. 1.webp"},
     { id:5, name: "BORUTO vol. 1", price: 140, img: "./assets/img/BORUTO vol. 1.webp"},
@@ -27,11 +24,12 @@ const img1 = document.getElementById("img1");
     { id:7, name: "ONE PUNCH MAN vol. 1", price: 110, img: "./assets/img/ONE PUNCH MAN vol. 1.webp"},
     { id:8, name: "HUNTER X HUNTER vol. 13", price: 130, img: "./assets/img/HUNTER X HUNTER vol. 13.webp"},
     { id:9, name: "ONE PIECE vol. 1", price: 300, img: "./assets/img/ONE PIECE vol. 1.jpg"},
-    { id:10, name: "BLACK CLOVER vol. 1", price: 170, img: "./assets/img/BLACK CLOVER vol. 1.jpg"},]
+    { id:10, name: "BLACK CLOVER vol. 1", price: 170, img: "./assets/img/BLACK CLOVER vol. 1.jpg"},
+   ]
  const series3 = [   
     { id:11, name: "JUJUTSU KAISEN vol. 1", price: 190, img: "./assets/img/JUJUTSU KAISEN vol. 1.webp"},
     { id:12, name: "TOKYO REVENGERS vol. 1", price: 200, img: "./assets/img/TOKYO REVENGERS vol. 1.webp"},
-    { id:13, name: "SOLO LEVELING vol. 1", price: 140, img: "./assets/img/SOLO LEVELING vol. 1.jpg"},
+    { id:13, name: "SOLO LEVELING vol. 2", price: 140, img: "./assets/img/Solo_Leveling_Vol_2.webp"},
     { id:14, name: "DEMON SLAYER vol. 1", price: 250, img: "./assets/img/DEMON SLAYER vol. 1.jpg"},
     { id:15, name: "MOB PSYCHO 100 vol. 1", price: 150, img: "./assets/img/MOB PSYCHO 100 vol. 1.jpg"}, 
  ]
