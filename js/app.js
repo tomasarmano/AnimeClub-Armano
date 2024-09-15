@@ -12,28 +12,90 @@
    localStorage.setItem('modo', body.className)
 })
 
+const img1 = document.getElementById("img1");
+
+
  const series = [
-    { name: "Naruto", price: 150 },
-    { name: "Dragon Ball", price: 170 },
-    { name: "Attack On Titan", price: 200 },
-    { name: "Chainsaw Man",  price: 80 },
-    { name: "Boruto", price: 140 },
-    { name: "Baki", price: 100 },
-    { name: "One Punch Man", price: 110 },
-    { name: "Hunter x Hunter", price: 130 },
-    { name: "One Piece", price: 300 },
-    { name: "Black Clover", price: 170 },
-    { name: "Jujutsu Kaisen", price: 190 },
-    { name: "Tokyo Revengers", price: 200 },
-    { name: "Solo Leveling", price: 140 },
-    { name: "Demon Slayer", price: 250 },
-    { name: "Mob Psycho 100", price: 150 }, 
+    { id:1, name: "NARUTO Vol. 4", price: 150, img: "./assets/img/NARUTO Vol.4.jpeg" },
+    { id:2, name: "DRAGON BALL vol. 8", price: 170, img: "./assets/img/DRAGON BALL Vol. 8.jpg" },
+    { id:3, name: "ATTACK ON TITAN vol. 1", price: 200, img: "./assets/img/ATTACK ON TITAN vol. 1.jpg"},
+    { id:4, name: "CHAINSAW MAN vol. 1",  price: 80, img: "./assets/img/CHAINSAW MAN vol. 1.webp"},
+    { id:5, name: "BORUTO vol. 1", price: 140, img: "./assets/img/BORUTO vol. 1.webp"},
+   ]
+ const series2 = [   
+    { id:6, name: "BAKI vol. 1", price: 100, img: "./assets/img/BAKI vol. 1.jpg"},
+    { id:7, name: "ONE PUNCH MAN vol. 1", price: 110, img: "./assets/img/ONE PUNCH MAN vol. 1.webp"},
+    { id:8, name: "HUNTER X HUNTER vol. 13", price: 130, img: "./assets/img/HUNTER X HUNTER vol. 13.webp"},
+    { id:9, name: "ONE PIECE vol. 1", price: 300, img: "./assets/img/ONE PIECE vol. 1.jpg"},
+    { id:10, name: "BLACK CLOVER vol. 1", price: 170, img: "./assets/img/BLACK CLOVER vol. 1.jpg"},]
+ const series3 = [   
+    { id:11, name: "JUJUTSU KAISEN vol. 1", price: 190, img: "./assets/img/JUJUTSU KAISEN vol. 1.webp"},
+    { id:12, name: "TOKYO REVENGERS vol. 1", price: 200, img: "./assets/img/TOKYO REVENGERS vol. 1.webp"},
+    { id:13, name: "SOLO LEVELING vol. 1", price: 140, img: "./assets/img/DRAGON BALL Vol. 8.jpg"},
+    { id:14, name: "DEMON SLAYER vol. 1", price: 250, img: "./assets/img/DEMON SLAYER vol. 1.jpg"},
+    { id:15, name: "MOB PSYCHO 100 vol. 1", price: 150, img: "./assets/img/MOB PSYCHO 100 vol. 1.jpg"}, 
  ]
 
  let series_JSON = JSON.stringify(series)
 
  localStorage.setItem('series', series_JSON)
  
+ const seriesCatalogoHTML = (serie) => {
+   return `
+   <div class="item">
+      <img src="${serie.img}">
+      <h3>${serie.name}</h3>
+      <p class="price">${serie.price}</p>
+      <button id= "btn-add-cart-${serie.id}" class="btn-add-cart">Añadir al carrito</button>
+   </div>
+   `
+ }
+ 
+ const mostrarCatalogo1 = () => {
+   const catalogoNodo = document.getElementById("catalogo1");
+   let catalogoHTML = "";
+   
+   for(const serie of series){
+      catalogoHTML += seriesCatalogoHTML(serie);
+   }
+
+   catalogoNodo.innerHTML = catalogoHTML;
+ };
+
+ const mostrarCatalogo2 = () => {
+   const catalogoNodo = document.getElementById("catalogo2");
+   let catalogoHTML = "";
+   
+   for(const serie of series2){
+      catalogoHTML += seriesCatalogoHTML(serie);
+   }
+
+   catalogoNodo.innerHTML = catalogoHTML;
+ };
+ const mostrarCatalogo3 = () => {
+   const catalogoNodo = document.getElementById("catalogo3");
+   let catalogoHTML = "";
+   
+   for(const serie of series3){
+      catalogoHTML += seriesCatalogoHTML(serie);
+   }
+
+   catalogoNodo.innerHTML = catalogoHTML;
+ };
+
+
+ mostrarCatalogo1();
+ mostrarCatalogo2();
+ mostrarCatalogo3();
+
+
+ console.log(seriesCatalogoHTML(series[0]));
+
+
+
+
+
+
  const btnCart = document.querySelector('.container-cart-icon');
  const containerCartProducts = document.querySelector('.container-cart-products');
  btnCart.addEventListener('click', () => {
