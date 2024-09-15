@@ -31,7 +31,7 @@ const img1 = document.getElementById("img1");
  const series3 = [   
     { id:11, name: "JUJUTSU KAISEN vol. 1", price: 190, img: "./assets/img/JUJUTSU KAISEN vol. 1.webp"},
     { id:12, name: "TOKYO REVENGERS vol. 1", price: 200, img: "./assets/img/TOKYO REVENGERS vol. 1.webp"},
-    { id:13, name: "SOLO LEVELING vol. 1", price: 140, img: "./assets/img/DRAGON BALL Vol. 8.jpg"},
+    { id:13, name: "SOLO LEVELING vol. 1", price: 140, img: "./assets/img/SOLO LEVELING vol. 1.jpg"},
     { id:14, name: "DEMON SLAYER vol. 1", price: 250, img: "./assets/img/DEMON SLAYER vol. 1.jpg"},
     { id:15, name: "MOB PSYCHO 100 vol. 1", price: 150, img: "./assets/img/MOB PSYCHO 100 vol. 1.jpg"}, 
  ]
